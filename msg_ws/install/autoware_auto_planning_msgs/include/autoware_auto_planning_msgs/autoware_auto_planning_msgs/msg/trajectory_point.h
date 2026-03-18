@@ -1,0 +1,1 @@
+/home/a01004/msg_ws/build/autoware_auto_planning_msgs/rosidl_generator_c/autoware_auto_planning_msgs/msg/trajectory_point.h

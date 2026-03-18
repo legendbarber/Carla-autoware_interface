@@ -1,0 +1,73 @@
+#!/usr/bin/env python3
+
+import argparse
+
+import rclpy
+from rclpy.executors import ExternalShutdownException
+from rclpy.node import Node
+from rclpy.qos import DurabilityPolicy
+from rclpy.qos import HistoryPolicy
+from rclpy.qos import QoSProfile
+from rclpy.qos import ReliabilityPolicy
+from sensor_msgs.msg import PointCloud2
+
+
+class PointCloudRelay(Node):
+    def __init__(self, input_topic: str, output_topic: str, node_name: str) -> None:
+        super().__init__(node_name)
+
+        # Subscribe with sensor-data style QoS and republish as RELIABLE so
+        # strict subscribers can connect without QoS warnings.
+        sub_qos = QoSProfile(
+            history=HistoryPolicy.KEEP_LAST,
+            depth=10,
+            reliability=ReliabilityPolicy.BEST_EFFORT,
+            durability=DurabilityPolicy.VOLATILE,
+        )
+        pub_qos = QoSProfile(
+            history=HistoryPolicy.KEEP_LAST,
+            depth=10,
+            reliability=ReliabilityPolicy.RELIABLE,
+            durability=DurabilityPolicy.VOLATILE,
+        )
+
+        self._publisher = self.create_publisher(PointCloud2, output_topic, pub_qos)
+        self._subscription = self.create_subscription(
+            PointCloud2,
+            input_topic,
+            self._on_msg,
+            sub_qos,
+        )
+
+        self.get_logger().info(
+            f"PointCloud relay enabled: {input_topic} -> {output_topic}"
+        )
+
+    def _on_msg(self, msg: PointCloud2) -> None:
+        self._publisher.publish(msg)
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--input-topic", required=True)
+    parser.add_argument("--output-topic", required=True)
+    parser.add_argument("--node-name", default="pointcloud_relay")
+    args = parser.parse_args()
+
+    rclpy.init()
+    node = PointCloudRelay(args.input_topic, args.output_topic, args.node_name)
+
+    try:
+        rclpy.spin(node)
+    except (KeyboardInterrupt, ExternalShutdownException):
+        pass
+    finally:
+        node.destroy_node()
+        if rclpy.ok():
+            rclpy.shutdown()
+
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

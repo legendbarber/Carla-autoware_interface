@@ -1,0 +1,4 @@
+[console_scripts]
+imu_relay = carla_autonomy_bridge.imu_relay:main
+pointcloud_relay = carla_autonomy_bridge.pointcloud_relay:main
+

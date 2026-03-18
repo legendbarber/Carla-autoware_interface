@@ -1,0 +1,4 @@
+source;share/carla_autoware_type_bridge/local_setup.bash
+source;share/carla_autoware_type_bridge/local_setup.dsv
+source;share/carla_autoware_type_bridge/local_setup.sh
+source;share/carla_autoware_type_bridge/local_setup.zsh

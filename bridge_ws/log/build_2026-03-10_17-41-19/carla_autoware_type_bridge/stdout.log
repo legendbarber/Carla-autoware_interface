@@ -1,0 +1,3 @@
+Consolidate compiler generated dependencies of target control_cmd_bridge_node
+[ 25%] Building CXX object CMakeFiles/vehicle_status_bridge_node.dir/src/vehicle_status_bridge_node.cpp.o
+[ 75%] Built target control_cmd_bridge_node

@@ -1,0 +1,1 @@
+/home/a01004/msg_ws/build/autoware_auto_vehicle_msgs/rosidl_cmake/srv/ControlModeCommand_Request.msg

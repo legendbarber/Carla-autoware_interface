@@ -1,0 +1,10 @@
+Consolidate compiler generated dependencies of target control_cmd_bridge_node
+[ 25%] Building CXX object CMakeFiles/vehicle_status_bridge_node.dir/src/vehicle_status_bridge_node.cpp.o
+[ 75%] Built target control_cmd_bridge_node
+/home/a01004/bridge_ws/carla_autoware_type_bridge/src/vehicle_status_bridge_node.cpp:11:10: fatal error: autoware_auto_vehicle_msgs/msg/velocity_report.hpp: No such file or directory
+   11 | #include "autoware_auto_vehicle_msgs/msg/velocity_report.hpp"
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+gmake[2]: *** [CMakeFiles/vehicle_status_bridge_node.dir/build.make:76: CMakeFiles/vehicle_status_bridge_node.dir/src/vehicle_status_bridge_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/vehicle_status_bridge_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

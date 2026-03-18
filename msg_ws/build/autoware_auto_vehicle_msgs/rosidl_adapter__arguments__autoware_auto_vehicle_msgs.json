@@ -1,0 +1,6 @@
+{
+  "package_name": "autoware_auto_vehicle_msgs",
+  "non_idl_tuples": [
+    "/home/a01004/msg_ws/src/autoware_auto_msgs/autoware_auto_vehicle_msgs:srv/ControlModeCommand.srv"
+  ]
+}

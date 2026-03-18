@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "autoware_auto_planning_msgs__py",
+		"source" : "/home/a01004/msg_ws/build/autoware_auto_planning_msgs/autoware_auto_planning_msgs__py"
+	}
+}

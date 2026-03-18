@@ -1,0 +1,88 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-dea0f9b10d17047e6be2.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "carla_autoware_type_bridge",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "carla_autoware_type_bridge_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-carla_autoware_type_bridge_uninstall-171f3747b8d906835858.json",
+					"name" : "carla_autoware_type_bridge_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "control_cmd_bridge_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-control_cmd_bridge_node-6b468ec893645461b918.json",
+					"name" : "control_cmd_bridge_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-c128ec50618b2a56aa4d.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "vehicle_status_bridge_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-vehicle_status_bridge_node-094b306513e7b1443df6.json",
+					"name" : "vehicle_status_bridge_node",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/a01004/Desktop/Calra-autoware_interface/bridge_ws/build/carla_autoware_type_bridge",
+		"source" : "/home/a01004/Desktop/Calra-autoware_interface/bridge_ws/src/carla_autoware_type_bridge"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

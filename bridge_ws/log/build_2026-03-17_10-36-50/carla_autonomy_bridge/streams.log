@@ -1,0 +1,22 @@
+[0.910s] Invoking command in '/home/a01004/Desktop/Calra-autoware_interface/bridge_ws/src/carla_autonomy_bridge': PYTHONPATH=/home/a01004/Desktop/Calra-autoware_interface/bridge_ws/build/carla_autonomy_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/a01004/Desktop/Calra-autoware_interface/bridge_ws/install/carla_autonomy_bridge/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/carla_autonomy_bridge build --build-base /home/a01004/Desktop/Calra-autoware_interface/bridge_ws/build/carla_autonomy_bridge/build install --record /home/a01004/Desktop/Calra-autoware_interface/bridge_ws/build/carla_autonomy_bridge/install.log --single-version-externally-managed install_data
+[1.240s] running egg_info
+[1.241s] writing ../../build/carla_autonomy_bridge/carla_autonomy_bridge.egg-info/PKG-INFO
+[1.241s] writing dependency_links to ../../build/carla_autonomy_bridge/carla_autonomy_bridge.egg-info/dependency_links.txt
+[1.241s] writing entry points to ../../build/carla_autonomy_bridge/carla_autonomy_bridge.egg-info/entry_points.txt
+[1.241s] writing requirements to ../../build/carla_autonomy_bridge/carla_autonomy_bridge.egg-info/requires.txt
+[1.241s] writing top-level names to ../../build/carla_autonomy_bridge/carla_autonomy_bridge.egg-info/top_level.txt
+[1.243s] reading manifest file '../../build/carla_autonomy_bridge/carla_autonomy_bridge.egg-info/SOURCES.txt'
+[1.244s] writing manifest file '../../build/carla_autonomy_bridge/carla_autonomy_bridge.egg-info/SOURCES.txt'
+[1.244s] running build
+[1.244s] running build_py
+[1.244s] running install
+[1.244s] running install_lib
+[1.246s] running install_data
+[1.246s] running install_egg_info
+[1.248s] removing '/home/a01004/Desktop/Calra-autoware_interface/bridge_ws/install/carla_autonomy_bridge/lib/python3.10/site-packages/carla_autonomy_bridge-0.1.0-py3.10.egg-info' (and everything under it)
+[1.248s] Copying ../../build/carla_autonomy_bridge/carla_autonomy_bridge.egg-info to /home/a01004/Desktop/Calra-autoware_interface/bridge_ws/install/carla_autonomy_bridge/lib/python3.10/site-packages/carla_autonomy_bridge-0.1.0-py3.10.egg-info
+[1.248s] running install_scripts
+[1.271s] Installing imu_relay script to /home/a01004/Desktop/Calra-autoware_interface/bridge_ws/install/carla_autonomy_bridge/lib/carla_autonomy_bridge
+[1.271s] Installing pointcloud_relay script to /home/a01004/Desktop/Calra-autoware_interface/bridge_ws/install/carla_autonomy_bridge/lib/carla_autonomy_bridge
+[1.271s] writing list of installed files to '/home/a01004/Desktop/Calra-autoware_interface/bridge_ws/build/carla_autonomy_bridge/install.log'
+[1.287s] Invoked command in '/home/a01004/Desktop/Calra-autoware_interface/bridge_ws/src/carla_autonomy_bridge' returned '0': PYTHONPATH=/home/a01004/Desktop/Calra-autoware_interface/bridge_ws/build/carla_autonomy_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/a01004/Desktop/Calra-autoware_interface/bridge_ws/install/carla_autonomy_bridge/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/carla_autonomy_bridge build --build-base /home/a01004/Desktop/Calra-autoware_interface/bridge_ws/build/carla_autonomy_bridge/build install --record /home/a01004/Desktop/Calra-autoware_interface/bridge_ws/build/carla_autonomy_bridge/install.log --single-version-externally-managed install_data

@@ -1,0 +1,133 @@
+[0.153s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'carla_autoware_type_bridge', '--cmake-clean-cache', '--cmake-args', '-Dautoware_auto_vehicle_msgs_DIR=/home/a01004/msg_ws/install/autoware_auto_vehicle_msgs/share/autoware_auto_vehicle_msgs/cmake']
+[0.153s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['carla_autoware_type_bridge'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=['-Dautoware_auto_vehicle_msgs_DIR=/home/a01004/msg_ws/install/autoware_auto_vehicle_msgs/share/autoware_auto_vehicle_msgs/cmake'], cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=True, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7d70a67baa70>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7d70a672d210>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7d70a672d210>>, mixin_verb=('build',))
+[0.417s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.417s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.417s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.417s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.417s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.417s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.417s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/a01004/bridge_ws'
+[0.417s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.418s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.418s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.418s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.418s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.418s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.418s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.418s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.418s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(carla_autoware_type_bridge) by extensions ['ignore', 'ignore_ament_install']
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(carla_autoware_type_bridge) by extension 'ignore'
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(carla_autoware_type_bridge) by extension 'ignore_ament_install'
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(carla_autoware_type_bridge) by extensions ['colcon_pkg']
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(carla_autoware_type_bridge) by extension 'colcon_pkg'
+[0.430s] Level 1:colcon.colcon_core.package_identification:_identify(carla_autoware_type_bridge) by extensions ['colcon_meta']
+[0.430s] Level 1:colcon.colcon_core.package_identification:_identify(carla_autoware_type_bridge) by extension 'colcon_meta'
+[0.430s] Level 1:colcon.colcon_core.package_identification:_identify(carla_autoware_type_bridge) by extensions ['ros']
+[0.430s] Level 1:colcon.colcon_core.package_identification:_identify(carla_autoware_type_bridge) by extension 'ros'
+[0.432s] DEBUG:colcon.colcon_core.package_identification:Package 'carla_autoware_type_bridge' with type 'ros.ament_cmake' and name 'carla_autoware_type_bridge'
+[0.432s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.432s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.432s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.432s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.432s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.432s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.432s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.432s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.432s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.432s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.432s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.458s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.458s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.483s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 451 installed packages in /home/a01004/autoware/install
+[0.487s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 9 installed packages in /home/a01004/autoware_msgs_ws/install
+[0.487s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 8 installed packages in /home/a01004/msg_ws/install
+[0.488s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 19 installed packages in /mnt/hdd/Workspace/ros-bridge/install
+[0.490s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 57 installed packages in /mnt/hdd/autonomy/cachesim/[furive-localization]Carla-localization_v1.0.0_ws/install
+[0.493s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 361 installed packages in /opt/ros/humble
+[0.495s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.574s] Level 5:colcon.colcon_core.verb:set package 'carla_autoware_type_bridge' build argument 'cmake_args' from command line to '['-Dautoware_auto_vehicle_msgs_DIR=/home/a01004/msg_ws/install/autoware_auto_vehicle_msgs/share/autoware_auto_vehicle_msgs/cmake']'
+[0.575s] Level 5:colcon.colcon_core.verb:set package 'carla_autoware_type_bridge' build argument 'cmake_target' from command line to 'None'
+[0.575s] Level 5:colcon.colcon_core.verb:set package 'carla_autoware_type_bridge' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.575s] Level 5:colcon.colcon_core.verb:set package 'carla_autoware_type_bridge' build argument 'cmake_clean_cache' from command line to 'True'
+[0.575s] Level 5:colcon.colcon_core.verb:set package 'carla_autoware_type_bridge' build argument 'cmake_clean_first' from command line to 'False'
+[0.575s] Level 5:colcon.colcon_core.verb:set package 'carla_autoware_type_bridge' build argument 'cmake_force_configure' from command line to 'False'
+[0.575s] Level 5:colcon.colcon_core.verb:set package 'carla_autoware_type_bridge' build argument 'ament_cmake_args' from command line to 'None'
+[0.575s] Level 5:colcon.colcon_core.verb:set package 'carla_autoware_type_bridge' build argument 'catkin_cmake_args' from command line to 'None'
+[0.575s] Level 5:colcon.colcon_core.verb:set package 'carla_autoware_type_bridge' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.575s] DEBUG:colcon.colcon_core.verb:Building package 'carla_autoware_type_bridge' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/a01004/bridge_ws/build/carla_autoware_type_bridge', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-Dautoware_auto_vehicle_msgs_DIR=/home/a01004/msg_ws/install/autoware_auto_vehicle_msgs/share/autoware_auto_vehicle_msgs/cmake'], 'cmake_clean_cache': True, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/a01004/bridge_ws/install/carla_autoware_type_bridge', 'merge_install': False, 'path': '/home/a01004/bridge_ws/carla_autoware_type_bridge', 'symlink_install': False, 'test_result_base': None}
+[0.575s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.576s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.576s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/a01004/bridge_ws/carla_autoware_type_bridge' with build type 'ament_cmake'
+[0.576s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/a01004/bridge_ws/carla_autoware_type_bridge'
+[0.579s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.579s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.579s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.629s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/a01004/bridge_ws/build/carla_autoware_type_bridge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/a01004/autoware/install/autoware_carla_interface:/home/a01004/autoware/install/ros2agnocast:/home/a01004/autoware/install/autoware_adapi_visualizers:/mnt/hdd/Workspace/ros-bridge/install/rqt_carla_control:/mnt/hdd/Workspace/ros-bridge/install/carla_waypoint_publisher:/mnt/hdd/Workspace/ros-bridge/install/carla_ackermann_control:/mnt/hdd/Workspace/ros-bridge/install/carla_ros_bridge:/mnt/hdd/Workspace/ros-bridge/install/carla_spawn_objects:/mnt/hdd/Workspace/ros-bridge/install/carla_manual_control:/mnt/hdd/Workspace/ros-bridge/install/carla_ad_agent:/mnt/hdd/Workspace/ros-bridge/install/ros_compatibility:/mnt/hdd/Workspace/ros-bridge/install/carla_walker_agent:/mnt/hdd/Workspace/ros-bridge/install/carla_twist_to_control:/mnt/hdd/Workspace/ros-bridge/install/carla_ros_scenario_runner:/mnt/hdd/Workspace/ros-bridge/install/carla_common:/opt/ros/humble /usr/bin/cmake /home/a01004/bridge_ws/carla_autoware_type_bridge -Dautoware_auto_vehicle_msgs_DIR=/home/a01004/msg_ws/install/autoware_auto_vehicle_msgs/share/autoware_auto_vehicle_msgs/cmake -DCMAKE_INSTALL_PREFIX=/home/a01004/bridge_ws/install/carla_autoware_type_bridge
+[5.821s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/a01004/bridge_ws/build/carla_autoware_type_bridge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/a01004/autoware/install/autoware_carla_interface:/home/a01004/autoware/install/ros2agnocast:/home/a01004/autoware/install/autoware_adapi_visualizers:/mnt/hdd/Workspace/ros-bridge/install/rqt_carla_control:/mnt/hdd/Workspace/ros-bridge/install/carla_waypoint_publisher:/mnt/hdd/Workspace/ros-bridge/install/carla_ackermann_control:/mnt/hdd/Workspace/ros-bridge/install/carla_ros_bridge:/mnt/hdd/Workspace/ros-bridge/install/carla_spawn_objects:/mnt/hdd/Workspace/ros-bridge/install/carla_manual_control:/mnt/hdd/Workspace/ros-bridge/install/carla_ad_agent:/mnt/hdd/Workspace/ros-bridge/install/ros_compatibility:/mnt/hdd/Workspace/ros-bridge/install/carla_walker_agent:/mnt/hdd/Workspace/ros-bridge/install/carla_twist_to_control:/mnt/hdd/Workspace/ros-bridge/install/carla_ros_scenario_runner:/mnt/hdd/Workspace/ros-bridge/install/carla_common:/opt/ros/humble /usr/bin/cmake /home/a01004/bridge_ws/carla_autoware_type_bridge -Dautoware_auto_vehicle_msgs_DIR=/home/a01004/msg_ws/install/autoware_auto_vehicle_msgs/share/autoware_auto_vehicle_msgs/cmake -DCMAKE_INSTALL_PREFIX=/home/a01004/bridge_ws/install/carla_autoware_type_bridge
+[5.823s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/a01004/bridge_ws/build/carla_autoware_type_bridge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/a01004/autoware/install/autoware_carla_interface:/home/a01004/autoware/install/ros2agnocast:/home/a01004/autoware/install/autoware_adapi_visualizers:/mnt/hdd/Workspace/ros-bridge/install/rqt_carla_control:/mnt/hdd/Workspace/ros-bridge/install/carla_waypoint_publisher:/mnt/hdd/Workspace/ros-bridge/install/carla_ackermann_control:/mnt/hdd/Workspace/ros-bridge/install/carla_ros_bridge:/mnt/hdd/Workspace/ros-bridge/install/carla_spawn_objects:/mnt/hdd/Workspace/ros-bridge/install/carla_manual_control:/mnt/hdd/Workspace/ros-bridge/install/carla_ad_agent:/mnt/hdd/Workspace/ros-bridge/install/ros_compatibility:/mnt/hdd/Workspace/ros-bridge/install/carla_walker_agent:/mnt/hdd/Workspace/ros-bridge/install/carla_twist_to_control:/mnt/hdd/Workspace/ros-bridge/install/carla_ros_scenario_runner:/mnt/hdd/Workspace/ros-bridge/install/carla_common:/opt/ros/humble /usr/bin/cmake --build /home/a01004/bridge_ws/build/carla_autoware_type_bridge -- -j16 -l16
+[22.919s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/a01004/bridge_ws/build/carla_autoware_type_bridge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/a01004/autoware/install/autoware_carla_interface:/home/a01004/autoware/install/ros2agnocast:/home/a01004/autoware/install/autoware_adapi_visualizers:/mnt/hdd/Workspace/ros-bridge/install/rqt_carla_control:/mnt/hdd/Workspace/ros-bridge/install/carla_waypoint_publisher:/mnt/hdd/Workspace/ros-bridge/install/carla_ackermann_control:/mnt/hdd/Workspace/ros-bridge/install/carla_ros_bridge:/mnt/hdd/Workspace/ros-bridge/install/carla_spawn_objects:/mnt/hdd/Workspace/ros-bridge/install/carla_manual_control:/mnt/hdd/Workspace/ros-bridge/install/carla_ad_agent:/mnt/hdd/Workspace/ros-bridge/install/ros_compatibility:/mnt/hdd/Workspace/ros-bridge/install/carla_walker_agent:/mnt/hdd/Workspace/ros-bridge/install/carla_twist_to_control:/mnt/hdd/Workspace/ros-bridge/install/carla_ros_scenario_runner:/mnt/hdd/Workspace/ros-bridge/install/carla_common:/opt/ros/humble /usr/bin/cmake --build /home/a01004/bridge_ws/build/carla_autoware_type_bridge -- -j16 -l16
+[22.954s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/a01004/bridge_ws/build/carla_autoware_type_bridge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/a01004/autoware/install/autoware_carla_interface:/home/a01004/autoware/install/ros2agnocast:/home/a01004/autoware/install/autoware_adapi_visualizers:/mnt/hdd/Workspace/ros-bridge/install/rqt_carla_control:/mnt/hdd/Workspace/ros-bridge/install/carla_waypoint_publisher:/mnt/hdd/Workspace/ros-bridge/install/carla_ackermann_control:/mnt/hdd/Workspace/ros-bridge/install/carla_ros_bridge:/mnt/hdd/Workspace/ros-bridge/install/carla_spawn_objects:/mnt/hdd/Workspace/ros-bridge/install/carla_manual_control:/mnt/hdd/Workspace/ros-bridge/install/carla_ad_agent:/mnt/hdd/Workspace/ros-bridge/install/ros_compatibility:/mnt/hdd/Workspace/ros-bridge/install/carla_walker_agent:/mnt/hdd/Workspace/ros-bridge/install/carla_twist_to_control:/mnt/hdd/Workspace/ros-bridge/install/carla_ros_scenario_runner:/mnt/hdd/Workspace/ros-bridge/install/carla_common:/opt/ros/humble /usr/bin/cmake --install /home/a01004/bridge_ws/build/carla_autoware_type_bridge
+[23.003s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(carla_autoware_type_bridge)
+[23.004s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/a01004/bridge_ws/build/carla_autoware_type_bridge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/a01004/autoware/install/autoware_carla_interface:/home/a01004/autoware/install/ros2agnocast:/home/a01004/autoware/install/autoware_adapi_visualizers:/mnt/hdd/Workspace/ros-bridge/install/rqt_carla_control:/mnt/hdd/Workspace/ros-bridge/install/carla_waypoint_publisher:/mnt/hdd/Workspace/ros-bridge/install/carla_ackermann_control:/mnt/hdd/Workspace/ros-bridge/install/carla_ros_bridge:/mnt/hdd/Workspace/ros-bridge/install/carla_spawn_objects:/mnt/hdd/Workspace/ros-bridge/install/carla_manual_control:/mnt/hdd/Workspace/ros-bridge/install/carla_ad_agent:/mnt/hdd/Workspace/ros-bridge/install/ros_compatibility:/mnt/hdd/Workspace/ros-bridge/install/carla_walker_agent:/mnt/hdd/Workspace/ros-bridge/install/carla_twist_to_control:/mnt/hdd/Workspace/ros-bridge/install/carla_ros_scenario_runner:/mnt/hdd/Workspace/ros-bridge/install/carla_common:/opt/ros/humble /usr/bin/cmake --install /home/a01004/bridge_ws/build/carla_autoware_type_bridge
+[23.009s] Level 1:colcon.colcon_core.environment:checking '/home/a01004/bridge_ws/install/carla_autoware_type_bridge' for CMake module files
+[23.010s] Level 1:colcon.colcon_core.environment:checking '/home/a01004/bridge_ws/install/carla_autoware_type_bridge' for CMake config files
+[23.010s] Level 1:colcon.colcon_core.shell:create_environment_hook('carla_autoware_type_bridge', 'cmake_prefix_path')
+[23.010s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/a01004/bridge_ws/install/carla_autoware_type_bridge/share/carla_autoware_type_bridge/hook/cmake_prefix_path.ps1'
+[23.011s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/a01004/bridge_ws/install/carla_autoware_type_bridge/share/carla_autoware_type_bridge/hook/cmake_prefix_path.dsv'
+[23.012s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/a01004/bridge_ws/install/carla_autoware_type_bridge/share/carla_autoware_type_bridge/hook/cmake_prefix_path.sh'
+[23.013s] Level 1:colcon.colcon_core.environment:checking '/home/a01004/bridge_ws/install/carla_autoware_type_bridge/lib'
+[23.013s] Level 1:colcon.colcon_core.environment:checking '/home/a01004/bridge_ws/install/carla_autoware_type_bridge/bin'
+[23.013s] Level 1:colcon.colcon_core.environment:checking '/home/a01004/bridge_ws/install/carla_autoware_type_bridge/lib/pkgconfig/carla_autoware_type_bridge.pc'
+[23.014s] Level 1:colcon.colcon_core.environment:checking '/home/a01004/bridge_ws/install/carla_autoware_type_bridge/lib/python3.10/site-packages'
+[23.014s] Level 1:colcon.colcon_core.environment:checking '/home/a01004/bridge_ws/install/carla_autoware_type_bridge/bin'
+[23.014s] INFO:colcon.colcon_core.shell:Creating package script '/home/a01004/bridge_ws/install/carla_autoware_type_bridge/share/carla_autoware_type_bridge/package.ps1'
+[23.015s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/a01004/bridge_ws/install/carla_autoware_type_bridge/share/carla_autoware_type_bridge/package.dsv'
+[23.016s] INFO:colcon.colcon_core.shell:Creating package script '/home/a01004/bridge_ws/install/carla_autoware_type_bridge/share/carla_autoware_type_bridge/package.sh'
+[23.017s] INFO:colcon.colcon_core.shell:Creating package script '/home/a01004/bridge_ws/install/carla_autoware_type_bridge/share/carla_autoware_type_bridge/package.bash'
+[23.018s] INFO:colcon.colcon_core.shell:Creating package script '/home/a01004/bridge_ws/install/carla_autoware_type_bridge/share/carla_autoware_type_bridge/package.zsh'
+[23.019s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/a01004/bridge_ws/install/carla_autoware_type_bridge/share/colcon-core/packages/carla_autoware_type_bridge)
+[23.020s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(carla_autoware_type_bridge)
+[23.020s] Level 1:colcon.colcon_core.environment:checking '/home/a01004/bridge_ws/install/carla_autoware_type_bridge' for CMake module files
+[23.020s] Level 1:colcon.colcon_core.environment:checking '/home/a01004/bridge_ws/install/carla_autoware_type_bridge' for CMake config files
+[23.021s] Level 1:colcon.colcon_core.shell:create_environment_hook('carla_autoware_type_bridge', 'cmake_prefix_path')
+[23.021s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/a01004/bridge_ws/install/carla_autoware_type_bridge/share/carla_autoware_type_bridge/hook/cmake_prefix_path.ps1'
+[23.022s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/a01004/bridge_ws/install/carla_autoware_type_bridge/share/carla_autoware_type_bridge/hook/cmake_prefix_path.dsv'
+[23.022s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/a01004/bridge_ws/install/carla_autoware_type_bridge/share/carla_autoware_type_bridge/hook/cmake_prefix_path.sh'
+[23.022s] Level 1:colcon.colcon_core.environment:checking '/home/a01004/bridge_ws/install/carla_autoware_type_bridge/lib'
+[23.022s] Level 1:colcon.colcon_core.environment:checking '/home/a01004/bridge_ws/install/carla_autoware_type_bridge/bin'
+[23.022s] Level 1:colcon.colcon_core.environment:checking '/home/a01004/bridge_ws/install/carla_autoware_type_bridge/lib/pkgconfig/carla_autoware_type_bridge.pc'
+[23.023s] Level 1:colcon.colcon_core.environment:checking '/home/a01004/bridge_ws/install/carla_autoware_type_bridge/lib/python3.10/site-packages'
+[23.023s] Level 1:colcon.colcon_core.environment:checking '/home/a01004/bridge_ws/install/carla_autoware_type_bridge/bin'
+[23.023s] INFO:colcon.colcon_core.shell:Creating package script '/home/a01004/bridge_ws/install/carla_autoware_type_bridge/share/carla_autoware_type_bridge/package.ps1'
+[23.023s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/a01004/bridge_ws/install/carla_autoware_type_bridge/share/carla_autoware_type_bridge/package.dsv'
+[23.024s] INFO:colcon.colcon_core.shell:Creating package script '/home/a01004/bridge_ws/install/carla_autoware_type_bridge/share/carla_autoware_type_bridge/package.sh'
+[23.024s] INFO:colcon.colcon_core.shell:Creating package script '/home/a01004/bridge_ws/install/carla_autoware_type_bridge/share/carla_autoware_type_bridge/package.bash'
+[23.024s] INFO:colcon.colcon_core.shell:Creating package script '/home/a01004/bridge_ws/install/carla_autoware_type_bridge/share/carla_autoware_type_bridge/package.zsh'
+[23.025s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/a01004/bridge_ws/install/carla_autoware_type_bridge/share/colcon-core/packages/carla_autoware_type_bridge)
+[23.025s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[23.025s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[23.025s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[23.025s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[23.035s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[23.035s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[23.035s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[23.043s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[23.043s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/a01004/bridge_ws/install/local_setup.ps1'
+[23.044s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/a01004/bridge_ws/install/_local_setup_util_ps1.py'
+[23.045s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/a01004/bridge_ws/install/setup.ps1'
+[23.063s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/a01004/bridge_ws/install/local_setup.sh'
+[23.063s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/a01004/bridge_ws/install/_local_setup_util_sh.py'
+[23.064s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/a01004/bridge_ws/install/setup.sh'
+[23.080s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/a01004/bridge_ws/install/local_setup.bash'
+[23.080s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/a01004/bridge_ws/install/setup.bash'
+[23.097s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/a01004/bridge_ws/install/local_setup.zsh'
+[23.098s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/a01004/bridge_ws/install/setup.zsh'

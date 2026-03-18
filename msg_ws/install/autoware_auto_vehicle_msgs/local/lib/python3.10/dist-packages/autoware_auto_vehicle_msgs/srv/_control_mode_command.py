@@ -1,0 +1,1 @@
+/home/a01004/msg_ws/build/autoware_auto_vehicle_msgs/rosidl_generator_py/autoware_auto_vehicle_msgs/srv/_control_mode_command.py

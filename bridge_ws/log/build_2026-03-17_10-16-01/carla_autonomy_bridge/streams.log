@@ -1,0 +1,48 @@
+[1.103s] Invoking command in '/home/a01004/Desktop/Calra-autoware_interface/bridge_ws/src/carla_autonomy_bridge': PYTHONPATH=/home/a01004/Desktop/Calra-autoware_interface/bridge_ws/build/carla_autonomy_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/a01004/Desktop/Calra-autoware_interface/bridge_ws/install/carla_autonomy_bridge/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/carla_autonomy_bridge build --build-base /home/a01004/Desktop/Calra-autoware_interface/bridge_ws/build/carla_autonomy_bridge/build install --record /home/a01004/Desktop/Calra-autoware_interface/bridge_ws/build/carla_autonomy_bridge/install.log --single-version-externally-managed install_data
+[1.478s] running egg_info
+[1.478s] creating ../../build/carla_autonomy_bridge/carla_autonomy_bridge.egg-info
+[1.478s] writing ../../build/carla_autonomy_bridge/carla_autonomy_bridge.egg-info/PKG-INFO
+[1.479s] writing dependency_links to ../../build/carla_autonomy_bridge/carla_autonomy_bridge.egg-info/dependency_links.txt
+[1.479s] writing entry points to ../../build/carla_autonomy_bridge/carla_autonomy_bridge.egg-info/entry_points.txt
+[1.479s] writing requirements to ../../build/carla_autonomy_bridge/carla_autonomy_bridge.egg-info/requires.txt
+[1.479s] writing top-level names to ../../build/carla_autonomy_bridge/carla_autonomy_bridge.egg-info/top_level.txt
+[1.479s] writing manifest file '../../build/carla_autonomy_bridge/carla_autonomy_bridge.egg-info/SOURCES.txt'
+[1.480s] reading manifest file '../../build/carla_autonomy_bridge/carla_autonomy_bridge.egg-info/SOURCES.txt'
+[1.481s] writing manifest file '../../build/carla_autonomy_bridge/carla_autonomy_bridge.egg-info/SOURCES.txt'
+[1.481s] running build
+[1.481s] running build_py
+[1.481s] creating /home/a01004/Desktop/Calra-autoware_interface/bridge_ws/build/carla_autonomy_bridge/build
+[1.481s] creating /home/a01004/Desktop/Calra-autoware_interface/bridge_ws/build/carla_autonomy_bridge/build/lib
+[1.481s] creating /home/a01004/Desktop/Calra-autoware_interface/bridge_ws/build/carla_autonomy_bridge/build/lib/carla_autonomy_bridge
+[1.481s] copying carla_autonomy_bridge/imu_relay.py -> /home/a01004/Desktop/Calra-autoware_interface/bridge_ws/build/carla_autonomy_bridge/build/lib/carla_autonomy_bridge
+[1.481s] copying carla_autonomy_bridge/__init__.py -> /home/a01004/Desktop/Calra-autoware_interface/bridge_ws/build/carla_autonomy_bridge/build/lib/carla_autonomy_bridge
+[1.482s] copying carla_autonomy_bridge/pointcloud_relay.py -> /home/a01004/Desktop/Calra-autoware_interface/bridge_ws/build/carla_autonomy_bridge/build/lib/carla_autonomy_bridge
+[1.482s] running install
+[1.482s] running install_lib
+[1.482s] creating /home/a01004/Desktop/Calra-autoware_interface/bridge_ws/install/carla_autonomy_bridge/lib/python3.10/site-packages/carla_autonomy_bridge
+[1.483s] copying /home/a01004/Desktop/Calra-autoware_interface/bridge_ws/build/carla_autonomy_bridge/build/lib/carla_autonomy_bridge/imu_relay.py -> /home/a01004/Desktop/Calra-autoware_interface/bridge_ws/install/carla_autonomy_bridge/lib/python3.10/site-packages/carla_autonomy_bridge
+[1.483s] copying /home/a01004/Desktop/Calra-autoware_interface/bridge_ws/build/carla_autonomy_bridge/build/lib/carla_autonomy_bridge/__init__.py -> /home/a01004/Desktop/Calra-autoware_interface/bridge_ws/install/carla_autonomy_bridge/lib/python3.10/site-packages/carla_autonomy_bridge
+[1.483s] copying /home/a01004/Desktop/Calra-autoware_interface/bridge_ws/build/carla_autonomy_bridge/build/lib/carla_autonomy_bridge/pointcloud_relay.py -> /home/a01004/Desktop/Calra-autoware_interface/bridge_ws/install/carla_autonomy_bridge/lib/python3.10/site-packages/carla_autonomy_bridge
+[1.484s] byte-compiling /home/a01004/Desktop/Calra-autoware_interface/bridge_ws/install/carla_autonomy_bridge/lib/python3.10/site-packages/carla_autonomy_bridge/imu_relay.py to imu_relay.cpython-310.pyc
+[1.484s] byte-compiling /home/a01004/Desktop/Calra-autoware_interface/bridge_ws/install/carla_autonomy_bridge/lib/python3.10/site-packages/carla_autonomy_bridge/__init__.py to __init__.cpython-310.pyc
+[1.484s] byte-compiling /home/a01004/Desktop/Calra-autoware_interface/bridge_ws/install/carla_autonomy_bridge/lib/python3.10/site-packages/carla_autonomy_bridge/pointcloud_relay.py to pointcloud_relay.cpython-310.pyc
+[1.485s] running install_data
+[1.485s] creating /home/a01004/Desktop/Calra-autoware_interface/bridge_ws/install/carla_autonomy_bridge/share
+[1.485s] creating /home/a01004/Desktop/Calra-autoware_interface/bridge_ws/install/carla_autonomy_bridge/share/ament_index
+[1.485s] creating /home/a01004/Desktop/Calra-autoware_interface/bridge_ws/install/carla_autonomy_bridge/share/ament_index/resource_index
+[1.485s] creating /home/a01004/Desktop/Calra-autoware_interface/bridge_ws/install/carla_autonomy_bridge/share/ament_index/resource_index/packages
+[1.485s] copying resource/carla_autonomy_bridge -> /home/a01004/Desktop/Calra-autoware_interface/bridge_ws/install/carla_autonomy_bridge/share/ament_index/resource_index/packages
+[1.485s] creating /home/a01004/Desktop/Calra-autoware_interface/bridge_ws/install/carla_autonomy_bridge/share/carla_autonomy_bridge
+[1.485s] copying package.xml -> /home/a01004/Desktop/Calra-autoware_interface/bridge_ws/install/carla_autonomy_bridge/share/carla_autonomy_bridge
+[1.485s] creating /home/a01004/Desktop/Calra-autoware_interface/bridge_ws/install/carla_autonomy_bridge/share/carla_autonomy_bridge/launch
+[1.485s] copying launch/relays.launch.py -> /home/a01004/Desktop/Calra-autoware_interface/bridge_ws/install/carla_autonomy_bridge/share/carla_autonomy_bridge/launch
+[1.485s] copying launch/bridge_with_relays.launch.py -> /home/a01004/Desktop/Calra-autoware_interface/bridge_ws/install/carla_autonomy_bridge/share/carla_autonomy_bridge/launch
+[1.485s] copying launch/carla_interface_with_preprocessor.launch.py -> /home/a01004/Desktop/Calra-autoware_interface/bridge_ws/install/carla_autonomy_bridge/share/carla_autonomy_bridge/launch
+[1.485s] copying launch/carla_pointcloud_preprocessor.launch.py -> /home/a01004/Desktop/Calra-autoware_interface/bridge_ws/install/carla_autonomy_bridge/share/carla_autonomy_bridge/launch
+[1.486s] running install_egg_info
+[1.488s] Copying ../../build/carla_autonomy_bridge/carla_autonomy_bridge.egg-info to /home/a01004/Desktop/Calra-autoware_interface/bridge_ws/install/carla_autonomy_bridge/lib/python3.10/site-packages/carla_autonomy_bridge-0.1.0-py3.10.egg-info
+[1.488s] running install_scripts
+[1.513s] Installing imu_relay script to /home/a01004/Desktop/Calra-autoware_interface/bridge_ws/install/carla_autonomy_bridge/lib/carla_autonomy_bridge
+[1.513s] Installing pointcloud_relay script to /home/a01004/Desktop/Calra-autoware_interface/bridge_ws/install/carla_autonomy_bridge/lib/carla_autonomy_bridge
+[1.514s] writing list of installed files to '/home/a01004/Desktop/Calra-autoware_interface/bridge_ws/build/carla_autonomy_bridge/install.log'
+[1.538s] Invoked command in '/home/a01004/Desktop/Calra-autoware_interface/bridge_ws/src/carla_autonomy_bridge' returned '0': PYTHONPATH=/home/a01004/Desktop/Calra-autoware_interface/bridge_ws/build/carla_autonomy_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/a01004/Desktop/Calra-autoware_interface/bridge_ws/install/carla_autonomy_bridge/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/carla_autonomy_bridge build --build-base /home/a01004/Desktop/Calra-autoware_interface/bridge_ws/build/carla_autonomy_bridge/build install --record /home/a01004/Desktop/Calra-autoware_interface/bridge_ws/build/carla_autonomy_bridge/install.log --single-version-externally-managed install_data

@@ -1,0 +1,68 @@
+[0.053s] Invoking command in '/home/a01004/bridge_ws/build/carla_autoware_type_bridge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/a01004/autoware/install/autoware_carla_interface:/home/a01004/autoware/install/ros2agnocast:/home/a01004/autoware/install/autoware_adapi_visualizers:/mnt/hdd/Workspace/ros-bridge/install/rqt_carla_control:/mnt/hdd/Workspace/ros-bridge/install/carla_waypoint_publisher:/mnt/hdd/Workspace/ros-bridge/install/carla_ackermann_control:/mnt/hdd/Workspace/ros-bridge/install/carla_ros_bridge:/mnt/hdd/Workspace/ros-bridge/install/carla_spawn_objects:/mnt/hdd/Workspace/ros-bridge/install/carla_manual_control:/mnt/hdd/Workspace/ros-bridge/install/carla_ad_agent:/mnt/hdd/Workspace/ros-bridge/install/ros_compatibility:/mnt/hdd/Workspace/ros-bridge/install/carla_walker_agent:/mnt/hdd/Workspace/ros-bridge/install/carla_twist_to_control:/mnt/hdd/Workspace/ros-bridge/install/carla_ros_scenario_runner:/mnt/hdd/Workspace/ros-bridge/install/carla_common:/opt/ros/humble /usr/bin/cmake /home/a01004/bridge_ws/carla_autoware_type_bridge -Dautoware_auto_vehicle_msgs_DIR=/home/a01004/msg_ws/install/autoware_auto_vehicle_msgs/share/autoware_auto_vehicle_msgs/cmake -DCMAKE_INSTALL_PREFIX=/home/a01004/bridge_ws/install/carla_autoware_type_bridge
+[0.211s] -- The C compiler identification is GNU 11.4.0
+[0.321s] -- The CXX compiler identification is GNU 11.4.0
+[0.344s] -- Detecting C compiler ABI info
+[0.538s] -- Detecting C compiler ABI info - done
+[0.545s] -- Check for working C compiler: /usr/lib/ccache/gcc - skipped
+[0.545s] -- Detecting C compile features
+[0.545s] -- Detecting C compile features - done
+[0.548s] -- Detecting CXX compiler ABI info
+[0.747s] -- Detecting CXX compiler ABI info - done
+[0.755s] -- Check for working CXX compiler: /usr/lib/ccache/g++ - skipped
+[0.755s] -- Detecting CXX compile features
+[0.755s] -- Detecting CXX compile features - done
+[0.791s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.327s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.938s] -- Found rclcpp: 16.0.17 (/opt/ros/humble/share/rclcpp/cmake)
+[2.330s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[2.393s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[2.467s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[2.594s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.755s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.213s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[3.319s] -- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+[3.600s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[3.701s] -- Looking for pthread.h
+[3.896s] -- Looking for pthread.h - found
+[3.896s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[4.096s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[4.097s] -- Found Threads: TRUE  
+[4.305s] -- Found autoware_auto_control_msgs: 1.0.0 (/home/a01004/autoware_msgs_ws/install/autoware_auto_control_msgs/share/autoware_auto_control_msgs/cmake)
+[4.338s] -- Found autoware_control_msgs: 1.11.0 (/home/a01004/autoware/install/autoware_control_msgs/share/autoware_control_msgs/cmake)
+[4.350s] -- Found autoware_auto_vehicle_msgs: 1.0.0 (/home/a01004/msg_ws/install/autoware_auto_vehicle_msgs/share/autoware_auto_vehicle_msgs/cmake)
+[4.692s] -- Found autoware_vehicle_msgs: 1.11.0 (/home/a01004/autoware/install/autoware_vehicle_msgs/share/autoware_vehicle_msgs/cmake)
+[5.206s] -- Configuring done
+[5.228s] -- Generating done
+[5.236s] -- Build files have been written to: /home/a01004/bridge_ws/build/carla_autoware_type_bridge
+[5.245s] Invoked command in '/home/a01004/bridge_ws/build/carla_autoware_type_bridge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/a01004/autoware/install/autoware_carla_interface:/home/a01004/autoware/install/ros2agnocast:/home/a01004/autoware/install/autoware_adapi_visualizers:/mnt/hdd/Workspace/ros-bridge/install/rqt_carla_control:/mnt/hdd/Workspace/ros-bridge/install/carla_waypoint_publisher:/mnt/hdd/Workspace/ros-bridge/install/carla_ackermann_control:/mnt/hdd/Workspace/ros-bridge/install/carla_ros_bridge:/mnt/hdd/Workspace/ros-bridge/install/carla_spawn_objects:/mnt/hdd/Workspace/ros-bridge/install/carla_manual_control:/mnt/hdd/Workspace/ros-bridge/install/carla_ad_agent:/mnt/hdd/Workspace/ros-bridge/install/ros_compatibility:/mnt/hdd/Workspace/ros-bridge/install/carla_walker_agent:/mnt/hdd/Workspace/ros-bridge/install/carla_twist_to_control:/mnt/hdd/Workspace/ros-bridge/install/carla_ros_scenario_runner:/mnt/hdd/Workspace/ros-bridge/install/carla_common:/opt/ros/humble /usr/bin/cmake /home/a01004/bridge_ws/carla_autoware_type_bridge -Dautoware_auto_vehicle_msgs_DIR=/home/a01004/msg_ws/install/autoware_auto_vehicle_msgs/share/autoware_auto_vehicle_msgs/cmake -DCMAKE_INSTALL_PREFIX=/home/a01004/bridge_ws/install/carla_autoware_type_bridge
+[5.247s] Invoking command in '/home/a01004/bridge_ws/build/carla_autoware_type_bridge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/a01004/autoware/install/autoware_carla_interface:/home/a01004/autoware/install/ros2agnocast:/home/a01004/autoware/install/autoware_adapi_visualizers:/mnt/hdd/Workspace/ros-bridge/install/rqt_carla_control:/mnt/hdd/Workspace/ros-bridge/install/carla_waypoint_publisher:/mnt/hdd/Workspace/ros-bridge/install/carla_ackermann_control:/mnt/hdd/Workspace/ros-bridge/install/carla_ros_bridge:/mnt/hdd/Workspace/ros-bridge/install/carla_spawn_objects:/mnt/hdd/Workspace/ros-bridge/install/carla_manual_control:/mnt/hdd/Workspace/ros-bridge/install/carla_ad_agent:/mnt/hdd/Workspace/ros-bridge/install/ros_compatibility:/mnt/hdd/Workspace/ros-bridge/install/carla_walker_agent:/mnt/hdd/Workspace/ros-bridge/install/carla_twist_to_control:/mnt/hdd/Workspace/ros-bridge/install/carla_ros_scenario_runner:/mnt/hdd/Workspace/ros-bridge/install/carla_common:/opt/ros/humble /usr/bin/cmake --build /home/a01004/bridge_ws/build/carla_autoware_type_bridge -- -j16 -l16
+[5.426s] Consolidate compiler generated dependencies of target control_cmd_bridge_node
+[5.474s] [ 25%] Building CXX object CMakeFiles/vehicle_status_bridge_node.dir/src/vehicle_status_bridge_node.cpp.o
+[5.476s] [ 75%] Built target control_cmd_bridge_node
+[21.050s] [100%] Linking CXX executable vehicle_status_bridge_node
+[22.307s] [100%] Built target vehicle_status_bridge_node
+[22.343s] Invoked command in '/home/a01004/bridge_ws/build/carla_autoware_type_bridge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/a01004/autoware/install/autoware_carla_interface:/home/a01004/autoware/install/ros2agnocast:/home/a01004/autoware/install/autoware_adapi_visualizers:/mnt/hdd/Workspace/ros-bridge/install/rqt_carla_control:/mnt/hdd/Workspace/ros-bridge/install/carla_waypoint_publisher:/mnt/hdd/Workspace/ros-bridge/install/carla_ackermann_control:/mnt/hdd/Workspace/ros-bridge/install/carla_ros_bridge:/mnt/hdd/Workspace/ros-bridge/install/carla_spawn_objects:/mnt/hdd/Workspace/ros-bridge/install/carla_manual_control:/mnt/hdd/Workspace/ros-bridge/install/carla_ad_agent:/mnt/hdd/Workspace/ros-bridge/install/ros_compatibility:/mnt/hdd/Workspace/ros-bridge/install/carla_walker_agent:/mnt/hdd/Workspace/ros-bridge/install/carla_twist_to_control:/mnt/hdd/Workspace/ros-bridge/install/carla_ros_scenario_runner:/mnt/hdd/Workspace/ros-bridge/install/carla_common:/opt/ros/humble /usr/bin/cmake --build /home/a01004/bridge_ws/build/carla_autoware_type_bridge -- -j16 -l16
+[22.378s] Invoking command in '/home/a01004/bridge_ws/build/carla_autoware_type_bridge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/a01004/autoware/install/autoware_carla_interface:/home/a01004/autoware/install/ros2agnocast:/home/a01004/autoware/install/autoware_adapi_visualizers:/mnt/hdd/Workspace/ros-bridge/install/rqt_carla_control:/mnt/hdd/Workspace/ros-bridge/install/carla_waypoint_publisher:/mnt/hdd/Workspace/ros-bridge/install/carla_ackermann_control:/mnt/hdd/Workspace/ros-bridge/install/carla_ros_bridge:/mnt/hdd/Workspace/ros-bridge/install/carla_spawn_objects:/mnt/hdd/Workspace/ros-bridge/install/carla_manual_control:/mnt/hdd/Workspace/ros-bridge/install/carla_ad_agent:/mnt/hdd/Workspace/ros-bridge/install/ros_compatibility:/mnt/hdd/Workspace/ros-bridge/install/carla_walker_agent:/mnt/hdd/Workspace/ros-bridge/install/carla_twist_to_control:/mnt/hdd/Workspace/ros-bridge/install/carla_ros_scenario_runner:/mnt/hdd/Workspace/ros-bridge/install/carla_common:/opt/ros/humble /usr/bin/cmake --install /home/a01004/bridge_ws/build/carla_autoware_type_bridge
+[22.413s] -- Install configuration: ""
+[22.413s] -- Installing: /home/a01004/bridge_ws/install/carla_autoware_type_bridge/lib/carla_autoware_type_bridge/vehicle_status_bridge_node
+[22.420s] -- Set runtime path of "/home/a01004/bridge_ws/install/carla_autoware_type_bridge/lib/carla_autoware_type_bridge/vehicle_status_bridge_node" to ""
+[22.420s] -- Installing: /home/a01004/bridge_ws/install/carla_autoware_type_bridge/lib/carla_autoware_type_bridge/control_cmd_bridge_node
+[22.423s] -- Set runtime path of "/home/a01004/bridge_ws/install/carla_autoware_type_bridge/lib/carla_autoware_type_bridge/control_cmd_bridge_node" to ""
+[22.423s] -- Installing: /home/a01004/bridge_ws/install/carla_autoware_type_bridge/share/carla_autoware_type_bridge/launch
+[22.423s] -- Installing: /home/a01004/bridge_ws/install/carla_autoware_type_bridge/share/carla_autoware_type_bridge/launch/bridges.launch.py
+[22.423s] -- Installing: /home/a01004/bridge_ws/install/carla_autoware_type_bridge/share/ament_index/resource_index/package_run_dependencies/carla_autoware_type_bridge
+[22.423s] -- Installing: /home/a01004/bridge_ws/install/carla_autoware_type_bridge/share/ament_index/resource_index/parent_prefix_path/carla_autoware_type_bridge
+[22.423s] -- Installing: /home/a01004/bridge_ws/install/carla_autoware_type_bridge/share/carla_autoware_type_bridge/environment/ament_prefix_path.sh
+[22.423s] -- Installing: /home/a01004/bridge_ws/install/carla_autoware_type_bridge/share/carla_autoware_type_bridge/environment/ament_prefix_path.dsv
+[22.423s] -- Installing: /home/a01004/bridge_ws/install/carla_autoware_type_bridge/share/carla_autoware_type_bridge/environment/path.sh
+[22.423s] -- Installing: /home/a01004/bridge_ws/install/carla_autoware_type_bridge/share/carla_autoware_type_bridge/environment/path.dsv
+[22.424s] -- Installing: /home/a01004/bridge_ws/install/carla_autoware_type_bridge/share/carla_autoware_type_bridge/local_setup.bash
+[22.424s] -- Installing: /home/a01004/bridge_ws/install/carla_autoware_type_bridge/share/carla_autoware_type_bridge/local_setup.sh
+[22.424s] -- Installing: /home/a01004/bridge_ws/install/carla_autoware_type_bridge/share/carla_autoware_type_bridge/local_setup.zsh
+[22.424s] -- Installing: /home/a01004/bridge_ws/install/carla_autoware_type_bridge/share/carla_autoware_type_bridge/local_setup.dsv
+[22.424s] -- Installing: /home/a01004/bridge_ws/install/carla_autoware_type_bridge/share/carla_autoware_type_bridge/package.dsv
+[22.424s] -- Installing: /home/a01004/bridge_ws/install/carla_autoware_type_bridge/share/ament_index/resource_index/packages/carla_autoware_type_bridge
+[22.425s] -- Installing: /home/a01004/bridge_ws/install/carla_autoware_type_bridge/share/carla_autoware_type_bridge/cmake/carla_autoware_type_bridgeConfig.cmake
+[22.425s] -- Installing: /home/a01004/bridge_ws/install/carla_autoware_type_bridge/share/carla_autoware_type_bridge/cmake/carla_autoware_type_bridgeConfig-version.cmake
+[22.425s] -- Installing: /home/a01004/bridge_ws/install/carla_autoware_type_bridge/share/carla_autoware_type_bridge/package.xml
+[22.428s] Invoked command in '/home/a01004/bridge_ws/build/carla_autoware_type_bridge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/a01004/autoware/install/autoware_carla_interface:/home/a01004/autoware/install/ros2agnocast:/home/a01004/autoware/install/autoware_adapi_visualizers:/mnt/hdd/Workspace/ros-bridge/install/rqt_carla_control:/mnt/hdd/Workspace/ros-bridge/install/carla_waypoint_publisher:/mnt/hdd/Workspace/ros-bridge/install/carla_ackermann_control:/mnt/hdd/Workspace/ros-bridge/install/carla_ros_bridge:/mnt/hdd/Workspace/ros-bridge/install/carla_spawn_objects:/mnt/hdd/Workspace/ros-bridge/install/carla_manual_control:/mnt/hdd/Workspace/ros-bridge/install/carla_ad_agent:/mnt/hdd/Workspace/ros-bridge/install/ros_compatibility:/mnt/hdd/Workspace/ros-bridge/install/carla_walker_agent:/mnt/hdd/Workspace/ros-bridge/install/carla_twist_to_control:/mnt/hdd/Workspace/ros-bridge/install/carla_ros_scenario_runner:/mnt/hdd/Workspace/ros-bridge/install/carla_common:/opt/ros/humble /usr/bin/cmake --install /home/a01004/bridge_ws/build/carla_autoware_type_bridge
