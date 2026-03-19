@@ -11,6 +11,7 @@
 #include "autoware_auto_vehicle_msgs/msg/velocity_report.hpp"
 #include "autoware_auto_vehicle_msgs/msg/steering_report.hpp"
 #include "autoware_auto_vehicle_msgs/msg/control_mode_report.hpp"
+#include <cmath>
 
 class VehicleStatusBridgeNode : public rclcpp::Node
 {
@@ -87,6 +88,7 @@ private:
     out.header = msg->header;
     out.longitudinal_velocity = msg->longitudinal_velocity;
     out.lateral_velocity = msg->lateral_velocity;
+    // deg/s -> rad/s
     out.heading_rate = msg->heading_rate;
     velocity_pub_->publish(out);
   }

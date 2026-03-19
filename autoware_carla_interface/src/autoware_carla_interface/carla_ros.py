@@ -663,7 +663,10 @@ class carla_ros2_interface(object):
         out_vel_state.header = self.get_msg_header(frame_id="base_link")
         out_vel_state.longitudinal_velocity = ego_velocity[0]
         out_vel_state.lateral_velocity = ego_velocity[1]
-        out_vel_state.heading_rate = ego_transform.transform_vector(ego_angular_velocity).z
+        # CARLA angular velocity is in deg/s; convert to Autoware's rad/s and flip sign convention.
+        out_vel_state.heading_rate = -math.radians(
+            ego_transform.transform_vector(ego_angular_velocity).z
+        )
 
         out_steering_state.stamp = out_vel_state.header.stamp
         out_steering_state.steering_tire_angle = -math.radians(steer_angle)
