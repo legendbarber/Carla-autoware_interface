@@ -88,7 +88,7 @@ private:
     out.header = msg->header;
     out.longitudinal_velocity = msg->longitudinal_velocity;
     out.lateral_velocity = msg->lateral_velocity;
-    // deg/s -> rad/s
+    // rad/s -> rad/s
     out.heading_rate = msg->heading_rate;
     velocity_pub_->publish(out);
   }

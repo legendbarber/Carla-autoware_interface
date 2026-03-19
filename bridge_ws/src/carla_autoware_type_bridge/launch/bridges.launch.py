@@ -27,7 +27,7 @@ def generate_launch_description():
             output='screen',
             parameters=[{
                 'input_topic': '/control/command/control_cmd',
-                'output_topic': '/control/command/control_cmd',
+                'output_topic': '/control/command/control_cmd2',
             }],
         ),
     ])

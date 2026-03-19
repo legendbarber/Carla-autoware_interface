@@ -15,7 +15,7 @@ public:
     input_topic_ = declare_parameter<std::string>(
       "input_topic", "/control/command/control_cmd");
     output_topic_ = declare_parameter<std::string>(
-      "output_topic", "/control/command/control_cmd");
+      "output_topic", "/control/command/control_cmd2");
 
     const auto qos = rclcpp::QoS(rclcpp::KeepLast(1)).reliable();
 
