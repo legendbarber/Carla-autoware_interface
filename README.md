@@ -3,7 +3,6 @@ bash bridge_install_script.sh
 
 
 ---
----
 
 ## 2. autoware모듈 파라미터 세팅
 : 각 모듈에서 바뀐 파라미터들을 정리해놓음(빌드안하고 사용할거면 아마도 install에서만 바꿔도됨. 혹시 심링크 걸려있는게 잇을수있으니 src에서도 바꾸는걸 추천)
@@ -40,7 +39,6 @@ bash bridge_install_script.sh
 - sensor_kit_calibration.yaml : velodyne_top_base_link.yaw 1.575 -> 0
 
 
----
 ---
 
 ## 3. CARLA, CARLA-autoware interface, 브릿지 코드 실행
