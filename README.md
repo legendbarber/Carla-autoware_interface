@@ -37,7 +37,8 @@ bash bridge_install_script.sh
 ### 8. vehicle
 - run.sh : launch_vehicle_interface:=true use_sim_time:=true
 - sensor_kit_calibration.yaml : velodyne_top_base_link.yaw 1.575 -> 0
-
+- /path/to/vehicle_module/install/sample_vehicle_description/share/sample_vehicle_description/config/* : sensors_calibration.yaml파일, sensor_kit_calibration.yaml파일 각 커스텀 센서 재원에 맞게 수정 -> '4. 차량 재원 참고 레퍼런스' 참고
+- /path/to/vehicle_module/install/individual_params/share/individual_params/config/default/sample_sensor_kit/* : vehicle_info.param.yaml파일, mirror.param.yaml파일 차량 재원에 맞게 수정 -> '4. 차량 재원 참고 레퍼런스' 참고
 
 ---
 
@@ -89,3 +90,144 @@ ros2 topic info /sensing/lidar/concatenated/pointcloud
 ```
 위와 같은 명령어로 브릿지 코드실행후, 제대로 연결되고 있는지 확인해야한다.
 
+---
+## 4. 차량 재원 참고 레퍼런스
+1. vehicle_info.param.yaml
+```yaml
+/**:
+  ros__parameters:
+    wheel_radius: 0.122 # The radius of the wheel, primarily used for dead reckoning.
+    wheel_width: 0.065 # The lateral width of a wheel tire, primarily used for dead reckoning.
+    wheel_base: 0.60 # between front wheel center and rear wheel center
+    wheel_tread: 0.52 # between left wheel center and right wheel center
+    front_overhang: 0.12 # between front wheel center and vehicle front
+    rear_overhang: 0.15 # between rear wheel center and vehicle rear
+    left_overhang: 0.05 # between left wheel center and vehicle left
+    right_overhang: 0.05 # between right wheel center and vehicle right
+    vehicle_height: 0.60
+    max_steer_angle: 0.70 # [rad]
+```
+2. mirror.param.yaml
+```yaml
+/**:
+  ros__parameters:
+    min_longitudinal_offset: 0.0
+    max_longitudinal_offset: 0.0
+    min_lateral_offset: 0.0
+    max_lateral_offset: 0.0
+    min_height_offset: 0.0
+    max_height_offset: 0.0
+```
+3. sensors_calibration.yaml
+```yaml
+base_link:
+  sensor_kit_base_link:
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    roll: 0.0
+    pitch: 0.0
+    yaw: 0.0
+  velodyne_rear_base_link:
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    roll: 0.0
+    pitch: 0.0
+    yaw: 0.0
+```
+4. sensor_kit_calibration.yaml
+```yaml
+sensor_kit_base_link:
+  camera0/camera_link:
+    x: 0.10731
+    y: 0.56343
+    z: -0.27697
+    roll: -0.025
+    pitch: 0.315
+    yaw: 1.035
+  camera1/camera_link:
+    x: -0.10731
+    y: -0.56343
+    z: -0.27697
+    roll: -0.025
+    pitch: 0.32
+    yaw: -2.12
+  camera2/camera_link:
+    x: 0.10731
+    y: -0.56343
+    z: -0.27697
+    roll: -0.00
+    pitch: 0.335
+    yaw: -1.04
+  camera3/camera_link:
+    x: -0.10731
+    y: 0.56343
+    z: -0.27697
+    roll: 0.0
+    pitch: 0.325
+    yaw: 2.0943951
+  camera4/camera_link:
+    x: 0.07356
+    y: 0.0
+    z: -0.0525
+    roll: 0.0
+    pitch: -0.03
+    yaw: -0.005
+  camera5/camera_link:
+    x: -0.07356
+    y: 0.0
+    z: -0.0525
+    roll: 0.0
+    pitch: -0.01
+    yaw: 3.125
+  traffic_light_right_camera/camera_link:
+    x: 0.05
+    y: -0.0175
+    z: -0.1
+    roll: 0.0
+    pitch: 0.0
+    yaw: 0.0
+  traffic_light_left_camera/camera_link:
+    x: 0.05
+    y: 0.0175
+    z: -0.1
+    roll: 0.0
+    pitch: 0.0
+    yaw: 0.0
+  velodyne_top_base_link:
+    x: 0.100
+    y: 0.000
+    z: 0.600
+    roll: 0.000
+    pitch: 0.000
+    yaw: 0.000
+  velodyne_left_base_link:
+    x: 0.0
+    y: 0.56362
+    z: -0.30555
+    roll: -0.02
+    pitch: 0.71
+    yaw: 1.575
+  velodyne_right_base_link:
+    x: 0.0
+    y: -0.56362
+    z: -0.30555
+    roll: -0.01
+    pitch: 0.71
+    yaw: -1.580
+  gnss_link:
+    x: 0.000
+    y: 0.000
+    z: 1.200
+    roll: 0.000
+    pitch: 0.000
+    yaw: 0.000
+  tamagawa/imu_link:
+    x: 0.000
+    y: 0.000
+    z: 0.500
+    roll: 0.000
+    pitch: 0.000
+    yaw: 0.000
+```
