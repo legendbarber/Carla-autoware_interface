@@ -66,6 +66,7 @@ def generate_launch_description():
         launch_arguments={
             "pointcloud_container_name": LaunchConfiguration("pointcloud_container_name"),
             "vehicle_model": LaunchConfiguration("vehicle_model"),
+            "vehicle_info_param_file": LaunchConfiguration("vehicle_info_param_file"),
             "vehicle_mirror_param_file": LaunchConfiguration("vehicle_mirror_param_file"),
             "use_sim_time": LaunchConfiguration("use_sim_time"),
             "use_multithread": LaunchConfiguration("use_multithread"),
@@ -125,8 +126,26 @@ def generate_launch_description():
             ),
             DeclareLaunchArgument("vehicle_model", default_value="sample_vehicle"),
             DeclareLaunchArgument(
+                "vehicle_info_param_file",
+                default_value=PathJoinSubstitution(
+                    [
+                        autoware_carla_interface_dir,
+                        "config",
+                        "vehicle",
+                        "vehicle_info.param.yaml",
+                    ]
+                ),
+            ),
+            DeclareLaunchArgument(
                 "vehicle_mirror_param_file",
-                default_value="/mnt/hdd/autonomy/.caches/config/vehicle/mirror.param.yaml",
+                default_value=PathJoinSubstitution(
+                    [
+                        autoware_carla_interface_dir,
+                        "config",
+                        "vehicle",
+                        "mirror.param.yaml",
+                    ]
+                ),
             ),
             DeclareLaunchArgument("use_sim_time", default_value="true"),
             DeclareLaunchArgument("use_multithread", default_value="true"),

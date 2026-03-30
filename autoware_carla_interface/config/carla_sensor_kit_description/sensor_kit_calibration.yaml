@@ -1,0 +1,68 @@
+# CARLA sensor kit calibration (in base_link frame)
+# Frames: base_link at rear axle center on ground (x forward, y right, z up).
+# Conversion from CARLA vehicle origin ("car center") to base_link:
+#   x_base = x_car_center + 1.425  (WB=2.850 m)
+#   y_base = y_car_center
+#   z_base = z_car_center
+#   rpy unchanged
+
+sensor_kit_base_link:
+  # Four-camera setup.
+  # The provided mkmini3 data appears to use left-positive lateral values,
+  # so lateral sign is flipped here to match CARLA/Autoware's Y-right convention.
+  CAM_FRONT/camera_link:
+    x: 0.24 # 0.250 + 1.425
+    y: 0.000
+    z: 0.500
+    roll: 0.000
+    pitch: -0.157080 # -9 deg
+    yaw: 0.000
+
+  CAM_FRONT_LEFT/camera_link:
+    x: -0.180 # -0.180 + 1.425
+    y: -0.120345
+    z: 0.500
+    roll: 0.000
+    pitch: 0.000
+    yaw: -0.698132 # -40 deg
+
+  CAM_FRONT_RIGHT/camera_link:
+    x: -0.180 # -0.180 + 1.425
+    y: 0.120
+    z: 0.500
+    roll: 0.000
+    pitch: 0.000
+    yaw: 0.698132 # +40 deg
+
+  CAM_BACK/camera_link:
+    x: -0.300 # -0.300 + 1.425
+    y: 0.000
+    z: 0.550
+    roll: 0.000
+    pitch: 0.000
+    yaw: 3.141593 # 180 deg
+
+  # LiDAR (roof)
+  velodyne_top_base_link:
+    x: 0.100 # 0.100 + 1.425
+    y: 0.000
+    z: 0.600
+    roll: 0.000
+    pitch: 0.000
+    yaw: 0.000
+
+  gnss_link:
+    x: 0.000 # 0.000 + 1.425
+    y: 0.000
+    z: 1.200
+    roll: 0.000
+    pitch: 0.000
+    yaw: 0.000
+
+  tamagawa/imu_link:
+    x: 0.000 # 0.000 + 1.425
+    y: 0.000
+    z: 0.500
+    roll: 0.000
+    pitch: 0.000
+    yaw: 0.000

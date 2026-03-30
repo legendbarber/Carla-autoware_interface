@@ -15,6 +15,23 @@ setup(
         (os.path.join("share", package_name), ["package.xml"]),
         (os.path.join("share", package_name), ["config/raw_vehicle_cmd_converter.param.yaml"]),
         (os.path.join("share", package_name, "config"), ["config/sensor_mapping.yaml"]),
+        (
+            os.path.join(
+                "share",
+                package_name,
+                "config",
+                "sensor_kits",
+                "carla_sensor_kit_description",
+            ),
+            ["config/sensor_kits/carla_sensor_kit_description/sensor_kit_calibration.yaml"],
+        ),
+        (
+            os.path.join("share", package_name, "config", "vehicle"),
+            [
+                "config/vehicle/vehicle_info.param.yaml",
+                "config/vehicle/mirror.param.yaml",
+            ],
+        ),
         (os.path.join("share", package_name), glob("calibration_maps/*.csv")),
         (os.path.join("share", package_name), glob("launch/*.launch.xml")),
     ],

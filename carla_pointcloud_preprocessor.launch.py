@@ -3,21 +3,17 @@ import os
 
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument
-from launch.actions import IncludeLaunchDescription
 from launch.actions import OpaqueFunction
-from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import LaunchConfiguration
-from launch.substitutions import PathJoinSubstitution
 from launch_ros.actions import LoadComposableNodes
 from launch_ros.descriptions import ComposableNode
-from launch_ros.substitutions import FindPackageShare
 import yaml
 
 
 def get_vehicle_info(context):
-    global_params = context.launch_configurations.get("ros_params", {})
-    if not global_params:
-        global_params = dict(context.launch_configurations.get("global_params", {}))
+    vehicle_info_param_file = LaunchConfiguration("vehicle_info_param_file").perform(context)
+    with open(vehicle_info_param_file, "r", encoding="utf-8") as file:
+        global_params = yaml.safe_load(file)["/**"]["ros__parameters"]
 
     return {
         "min_x": -(global_params["rear_overhang"]),
@@ -116,24 +112,9 @@ def launch_setup(context, *args, **kwargs):
 
 
 def generate_launch_description():
-    default_autonomy_config_dir = os.environ.get(
-        "AUTONOMY_CONFIG_DIR", "/mnt/hdd/autonomy/.caches/config"
-    )
-
-    global_params = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(
-            PathJoinSubstitution(
-                [
-                    FindPackageShare("autoware_global_parameter_loader"),
-                    "launch",
-                    "global_params.launch.py",
-                ]
-            )
-        ),
-        launch_arguments={
-            "use_sim_time": LaunchConfiguration("use_sim_time"),
-            "vehicle_model": LaunchConfiguration("vehicle_model"),
-        }.items(),
+    default_autoware_carla_interface_dir = os.environ.get(
+        "AUTOWARE_CARLA_INTERFACE_SOURCE_DIR",
+        os.path.join(os.path.dirname(os.path.realpath(__file__)), "autoware_carla_interface"),
     )
 
     return LaunchDescription(
@@ -144,8 +125,22 @@ def generate_launch_description():
             ),
             DeclareLaunchArgument("vehicle_model", default_value="sample_vehicle"),
             DeclareLaunchArgument(
+                "vehicle_info_param_file",
+                default_value=os.path.join(
+                    default_autoware_carla_interface_dir,
+                    "config",
+                    "vehicle",
+                    "vehicle_info.param.yaml",
+                ),
+            ),
+            DeclareLaunchArgument(
                 "vehicle_mirror_param_file",
-                default_value=f"{default_autonomy_config_dir}/vehicle/mirror.param.yaml",
+                default_value=os.path.join(
+                    default_autoware_carla_interface_dir,
+                    "config",
+                    "vehicle",
+                    "mirror.param.yaml",
+                ),
             ),
             DeclareLaunchArgument("use_sim_time", default_value="true"),
             DeclareLaunchArgument("use_multithread", default_value="true"),
@@ -160,7 +155,6 @@ def generate_launch_description():
                 "crop_box_filter_plugin",
                 default_value="pointcloud_preprocessor::CropBoxFilterComponent",
             ),
-            global_params,
             OpaqueFunction(function=launch_setup),
         ]
     )

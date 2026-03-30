@@ -190,27 +190,75 @@ class SensorKitLoader:
             FileNotFoundError: If sensor kit calibration cannot be found
         """
         tried_packages = []
+        tried_local_paths = []
+        variants = self._build_sensor_kit_variants(sensor_kit_name)
 
-        # Build list of package name variants to try
-        variants = [sensor_kit_name]
-
-        # Add _description variant if currently _launch
-        desc_name = sensor_kit_name.replace("_launch", "_description")
-        if desc_name != sensor_kit_name:
-            variants.append(desc_name)
-
-        # Add suffix variants if no suffix present
-        if not sensor_kit_name.endswith(("_launch", "_description")):
-            variants.extend([sensor_kit_name + "_description", sensor_kit_name + "_launch"])
-
-        # Try each variant
+        # Prefer bundled sensor kits so this repository stays self-contained.
         for variant in variants:
+            local_path = self._try_find_local_sensor_kit(variant)
+            if local_path:
+                return local_path
+            tried_local_paths.extend(
+                [
+                    str(search_root / variant / "sensor_kit_calibration.yaml")
+                    for search_root in self._get_local_sensor_kit_search_roots()
+                ]
+            )
+
             calib_path = self._try_find_sensor_kit(variant)
             if calib_path:
                 return calib_path
             tried_packages.append(variant)
 
-        raise self._create_not_found_error(sensor_kit_name, tried_packages)
+        raise self._create_not_found_error(sensor_kit_name, tried_packages, tried_local_paths)
+
+    def _build_sensor_kit_variants(self, sensor_kit_name: str) -> List[str]:
+        """Build candidate sensor kit names from the requested value."""
+        variants = [sensor_kit_name]
+
+        desc_name = sensor_kit_name.replace("_launch", "_description")
+        if desc_name != sensor_kit_name:
+            variants.append(desc_name)
+
+        if not sensor_kit_name.endswith(("_launch", "_description")):
+            variants.extend([sensor_kit_name + "_description", sensor_kit_name + "_launch"])
+
+        return variants
+
+    def _get_local_sensor_kit_search_roots(self) -> List[Path]:
+        """Return bundled sensor kit search roots in install/source spaces."""
+        search_roots: List[Path] = []
+
+        try:
+            package_dir = get_package_share_directory("autoware_carla_interface")
+            search_roots.append(Path(package_dir) / "config" / "sensor_kits")
+        except Exception:
+            pass
+
+        source_root = Path(__file__).resolve().parents[3] / "config" / "sensor_kits"
+        search_roots.append(source_root)
+
+        deduped_roots: List[Path] = []
+        seen = set()
+        for root in search_roots:
+            root_str = str(root)
+            if root_str in seen:
+                continue
+            seen.add(root_str)
+            deduped_roots.append(root)
+
+        return deduped_roots
+
+    def _try_find_local_sensor_kit(self, sensor_kit_name: str) -> Optional[Path]:
+        """Try to find a bundled sensor kit inside this repository/package."""
+        for search_root in self._get_local_sensor_kit_search_roots():
+            calib_path = search_root / sensor_kit_name
+            if (calib_path / "sensor_kit_calibration.yaml").exists():
+                self.sensor_kit_path = calib_path
+                self.logger.info(f"Found bundled sensor kit at: {calib_path}")
+                return calib_path
+
+        return None
 
     def _try_find_sensor_kit(self, package_name: str) -> Optional[Path]:
         """Try to find sensor kit calibration in a package.
@@ -240,24 +288,30 @@ class SensorKitLoader:
 
         return None
 
-    def _create_not_found_error(self, sensor_kit_name: str, tried_packages: List[str]):
+    def _create_not_found_error(
+        self, sensor_kit_name: str, tried_packages: List[str], tried_local_paths: List[str]
+    ):
         """Create detailed FileNotFoundError for missing sensor kit.
 
         Args:
             sensor_kit_name: Original sensor kit name
             tried_packages: List of package names attempted
+            tried_local_paths: List of bundled sensor kit file paths attempted
 
         Returns:
             FileNotFoundError with detailed message
         """
+        local_paths_text = "\n".join(f"  - {path}" for path in tried_local_paths) or "  - none"
         return FileNotFoundError(
             f"Sensor kit calibration not found for '{sensor_kit_name}'.\n"
             f"Attempted packages: {tried_packages}\n"
+            f"Attempted bundled files:\n{local_paths_text}\n"
             f"Required file: config/sensor_kit_calibration.yaml\n"
             f"Ensure the sensor kit description package is:\n"
             f"  1. Built and installed in your ROS 2 workspace\n"
             f"  2. Contains config/sensor_kit_calibration.yaml\n"
-            f"  3. Visible to 'ros2 pkg list' command"
+            f"  3. Visible to 'ros2 pkg list' command\n"
+            f"Or bundle it in autoware_carla_interface/config/sensor_kits/<name>/"
         )
 
     def parse_sensor_kit_calibration(self, sensor_kit_path: Path) -> Dict[str, Any]:
